@@ -9,6 +9,7 @@ import 'package:ui_migration/pages/discover.dart';
 import 'package:ui_migration/pages/dream_job.dart';
 import 'package:ui_migration/pages/expenses.dart';
 import 'package:ui_migration/pages/github_users.dart';
+import 'package:ui_migration/pages/learn_flutter.dart';
 import 'package:ui_migration/pages/loading.dart';
 import 'package:ui_migration/pages/movies.dart';
 import 'package:ui_migration/pages/no_connection.dart';
@@ -20,7 +21,7 @@ import 'package:ui_migration/pages/verification.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProductCard(),
+      home: LearnFlutter(),
     ));
 
 class HomePage extends StatelessWidget {
