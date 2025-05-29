@@ -12,16 +12,18 @@ import 'package:ui_migration/pages/github_users.dart';
 import 'package:ui_migration/pages/learn_flutter.dart';
 import 'package:ui_migration/pages/loading.dart';
 import 'package:ui_migration/pages/movies.dart';
+import 'package:ui_migration/pages/new_collection.dart';
 import 'package:ui_migration/pages/no_connection.dart';
 import 'package:ui_migration/pages/product_card.dart';
 import 'package:ui_migration/pages/squid_game.dart';
+import 'package:ui_migration/pages/staggered_gridview.dart';
 import 'package:ui_migration/pages/tea_page.dart';
 import 'package:ui_migration/pages/vartical_card_pager.dart';
 import 'package:ui_migration/pages/verification.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LearnFlutter(),
+      home: DesignTools(),
     ));
 
 class HomePage extends StatelessWidget {
