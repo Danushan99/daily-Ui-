@@ -36,7 +36,7 @@ class _DesignToolsState extends State<DesignTools> {
       'selected_image':
           'https://img.icons8.com/?size=100&id=13631&format=png&color=000000',
       'name': 'Adobe Illustrator',
-      'description': 'industry-leading graphic design tool',
+      'description': 'Industry-leading graphic design tool',
     }
   ];
 
