@@ -2,7 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
 class DesignTools extends StatefulWidget {
-  const DesignTools({Key? key}) : super(key: key);
+  const DesignTools({super.key});
 
   @override
   _DesignToolsState createState() => _DesignToolsState();
@@ -39,7 +39,6 @@ class _DesignToolsState extends State<DesignTools> {
       'description': 'Industry-leading graphic design tool',
     }
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -115,8 +114,8 @@ class _DesignToolsState extends State<DesignTools> {
                                 : BoxShadow(
                                     color: Colors.grey.shade200,
                                     offset: const Offset(0, 3),
-                                    blurRadius: 10)
-                          ]),
+                                    blurRadius: 10),
+                          ],),
                       child: Row(
                         children: [
                           selectedTool == index
@@ -148,7 +147,7 @@ class _DesignToolsState extends State<DesignTools> {
                                     color: Colors.grey.shade600,
                                     fontSize: 14,
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           ),
@@ -157,7 +156,7 @@ class _DesignToolsState extends State<DesignTools> {
                             color: selectedTool == index
                                 ? Colors.blue
                                 : Colors.white,
-                          )
+                          ),
                         ],
                       ),
                     ),
