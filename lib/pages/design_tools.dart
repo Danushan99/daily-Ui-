@@ -44,11 +44,11 @@ class _DesignToolsState extends State<DesignTools> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           FadeInDown(
@@ -63,11 +63,11 @@ class _DesignToolsState extends State<DesignTools> {
                       color: Colors.grey.shade800,
                       fontWeight: FontWeight.bold),
                 ),
-                IconButton(onPressed: () {}, icon: Icon(Icons.close))
+                IconButton(onPressed: () {}, icon: const Icon(Icons.close))
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           FadeInDown(
@@ -95,9 +95,9 @@ class _DesignToolsState extends State<DesignTools> {
                     delay: Duration(milliseconds: index * 100),
                     child: AnimatedContainer(
                       padding:
-                          EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                      margin: EdgeInsets.only(bottom: 20),
-                      duration: Duration(milliseconds: 500),
+                          const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                      margin: const EdgeInsets.only(bottom: 20),
+                      duration: const Duration(milliseconds: 500),
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(8),
@@ -110,11 +110,11 @@ class _DesignToolsState extends State<DesignTools> {
                             selectedTool == index
                                 ? BoxShadow(
                                     color: Colors.blue.shade100,
-                                    offset: Offset(0, 3),
+                                    offset: const Offset(0, 3),
                                     blurRadius: 10)
                                 : BoxShadow(
                                     color: Colors.grey.shade200,
-                                    offset: Offset(0, 3),
+                                    offset: const Offset(0, 3),
                                     blurRadius: 10)
                           ]),
                       child: Row(
@@ -128,7 +128,7 @@ class _DesignToolsState extends State<DesignTools> {
                                   tools[index]['image'],
                                   width: 50,
                                 ),
-                          SizedBox(
+                          const SizedBox(
                             width: 20,
                           ),
                           Expanded(
