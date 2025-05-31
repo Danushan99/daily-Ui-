@@ -23,7 +23,7 @@ import 'package:ui_migration/pages/verification.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: DesignTools(),
+      home: ChartExample(),
     ));
 
 class HomePage extends StatelessWidget {
