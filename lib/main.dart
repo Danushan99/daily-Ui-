@@ -15,15 +15,17 @@ import 'package:ui_migration/pages/movies.dart';
 import 'package:ui_migration/pages/new_collection.dart';
 import 'package:ui_migration/pages/no_connection.dart';
 import 'package:ui_migration/pages/product_card.dart';
+import 'package:ui_migration/pages/spinner_page.dart';
 import 'package:ui_migration/pages/squid_game.dart';
 import 'package:ui_migration/pages/staggered_gridview.dart';
 import 'package:ui_migration/pages/tea_page.dart';
 import 'package:ui_migration/pages/vartical_card_pager.dart';
 import 'package:ui_migration/pages/verification.dart';
+import 'package:ui_migration/pages/vero.dart';
 
-void main() => runApp(MaterialApp(
+void main() => runApp(const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ChartExample(),
+      home: VeroPage(),
     ));
 
 class HomePage extends StatelessWidget {
@@ -36,9 +38,9 @@ class HomePage extends StatelessWidget {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        padding: EdgeInsets.all(20),
-        color: Color(0xff8186F0),
-        child: Center(child: Box()),
+        padding: const EdgeInsets.all(20),
+        color: const Color(0xff8186F0),
+        child: const Center(child: Box()),
       ),
     );
   }
