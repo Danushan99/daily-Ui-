@@ -10,7 +10,6 @@ import 'package:ui_migration/shop/screens/home_screen.dart';
 //       debugShowCheckedModeBanner: false,
 //       home: VeroPage(),
 //     ));
-
 void main() {
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(
@@ -37,7 +36,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
