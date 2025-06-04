@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ui_migration/pages/animated_container.dart';
 import 'package:ui_migration/pages/chart_example.dart';
+import 'package:ui_migration/pages/learn_flutter.dart';
 import 'package:ui_migration/pages/salomon_bottom_bar.dart';
 import 'package:ui_migration/pages/spinner_page.dart';
 import 'package:ui_migration/pages/stocks.dart';
@@ -13,7 +14,7 @@ import 'package:ui_migration/shop/screens/home_screen.dart';
 
 void main() => runApp(const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SalomonBottomNavBar(),
+      home: LearnFlutter(),
     ));
 // void main() {
 //   runApp(MultiProvider(providers: [
