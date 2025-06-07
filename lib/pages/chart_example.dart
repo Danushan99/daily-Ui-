@@ -40,26 +40,26 @@ class _ChartExampleState extends State<ChartExample> {
         elevation: 0,
         actions: [
           IconButton(
-            icon: Icon(Icons.notifications, color: Colors.blueGrey,),
+            icon: const Icon(Icons.notifications, color: Colors.blueGrey,),
             onPressed: () {
             },
           ),
           IconButton(
-            icon: Icon(Icons.more_vert, color: Colors.blueGrey,),
+            icon: const Icon(Icons.more_vert, color: Colors.blueGrey,),
             onPressed: () {},
           ),
         ],
         leading: IconButton(
-          icon: Icon(Icons.menu, color: Colors.blueGrey,),
+          icon: const Icon(Icons.menu, color: Colors.blueGrey,),
           onPressed: () {},
         ),
       ),
-      backgroundColor: Color(0xff161621),
+      backgroundColor: const Color(0xff161621),
       bottomNavigationBar: SalomonBottomBar(
         currentIndex: _currentIndex,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white,
-        margin: EdgeInsets.only(bottom: 30, top: 10, right: 20, left: 20),
+        margin: const EdgeInsets.only(bottom: 30, top: 10, right: 20, left: 20),
         onTap: (index) {
           setState(() {
             _currentIndex = index;
@@ -67,23 +67,23 @@ class _ChartExampleState extends State<ChartExample> {
         },
         items: [
           SalomonBottomBarItem(
-            icon: Icon(Icons.home),
-            title: Text("Home"),
+            icon: const Icon(Icons.home),
+            title: const Text("Home"),
             selectedColor: Colors.white
           ),
           SalomonBottomBarItem(
-            icon: Icon(Icons.explore_outlined),
-            title: Text("Likes"),
+            icon: const Icon(Icons.explore_outlined),
+            title: const Text("Likes"),
             selectedColor: Colors.pink
           ),
           SalomonBottomBarItem(
-            icon: Icon(Icons.data_usage),
-            title: Text("Search"),
+            icon: const Icon(Icons.data_usage),
+            title: const Text("Search"),
             selectedColor: Colors.orange
           ),
           SalomonBottomBarItem(
-            icon: Icon(Icons.settings),
-            title: Text("Profile"),
+            icon: const Icon(Icons.settings),
+            title: const Text("Profile"),
             selectedColor: Colors.teal
           )
         ],
@@ -103,11 +103,11 @@ class _ChartExampleState extends State<ChartExample> {
                       child: Column(
                         children: [
                           FadeInUp(
-                            duration: Duration(milliseconds: 800),
+                            duration: const Duration(milliseconds: 800),
                             child: Text("Balance", style: TextStyle(color: Colors.blueGrey.shade300, fontSize: 20),)),
-                          SizedBox(height: 20,),
+                          const SizedBox(height: 20,),
                           FadeInUp(
-                            duration: Duration(milliseconds: 800),
+                            duration: const Duration(milliseconds: 800),
                             child: Text("\$ 12,500.00", style: GoogleFonts.sora(
                               fontSize: 40,
                               fontWeight: FontWeight.bold,
@@ -119,13 +119,13 @@ class _ChartExampleState extends State<ChartExample> {
                       ),
                     ),
                     FadeInUp(
-                      duration: Duration(milliseconds: 1000),
+                      duration: const Duration(milliseconds: 1000),
                       child: Container(
                         width: double.infinity,
                         height: 250,
                         child: LineChart(
                           mainData(),
-                          duration: Duration(milliseconds: 1000), // Optional
+                          duration: const Duration(milliseconds: 1000), // Optional
                           curve: Curves.linear, // Optional
                         ),
                       ),
@@ -142,7 +142,7 @@ class _ChartExampleState extends State<ChartExample> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               FadeInUp(
-                duration: Duration(milliseconds: 1000),
+                duration: const Duration(milliseconds: 1000),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -154,8 +154,8 @@ class _ChartExampleState extends State<ChartExample> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)
                       ),
-                      color: Color(0xff02d39a).withOpacity(0.7),
-                      child: Row(
+                      color: const Color(0xff02d39a).withOpacity(0.7),
+                      child: const Row(
                         children: [
                           Icon(Iconsax.wallet, color: Colors.white,),
                           SizedBox(width: 10,),
@@ -163,19 +163,19 @@ class _ChartExampleState extends State<ChartExample> {
                         ],
                       ),
                     ),
-                    SizedBox(width: 20,),
+                    const SizedBox(width: 20,),
                     MaterialButton(
                       onPressed: () {},
                       shape: RoundedRectangleBorder(
-                        side: BorderSide(color: Color(0xff02d39a).withOpacity(0.4), width: 1),
+                        side: BorderSide(color: const Color(0xff02d39a).withOpacity(0.4), width: 1),
                         borderRadius: BorderRadius.circular(10)
                       ),
-                      splashColor: Color(0xff02d39a).withOpacity(0.4),
-                      highlightColor: Color(0xff02d39a).withOpacity(0.4),
+                      splashColor: const Color(0xff02d39a).withOpacity(0.4),
+                      highlightColor: const Color(0xff02d39a).withOpacity(0.4),
                       padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                       color: Colors.transparent,
                       elevation: 0,
-                      child: Row(
+                      child: const Row(
                         children: [
                           Icon(Iconsax.arrow_3, color: Colors.white,),
                           SizedBox(width: 10,),
@@ -186,17 +186,17 @@ class _ChartExampleState extends State<ChartExample> {
                   ],
                 ),
               ),
-              SizedBox(height: 40,),
+              const SizedBox(height: 40,),
               // recent transactions
               FadeInUp(
-                duration: Duration(milliseconds: 1000),
+                duration: const Duration(milliseconds: 1000),
                 child: Text("Recent Transactions", style: TextStyle(color: Colors.blueGrey.shade300, fontSize: 16),)),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Expanded(
                 child: Container(
                   height: 200,
                   child: ListView.builder(
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemCount: 5,
                     itemBuilder: (context, index) {
                       return FadeInUp(
@@ -210,7 +210,7 @@ class _ChartExampleState extends State<ChartExample> {
                             // color: Colors.black.withOpacity(0.3),
                             border: Border.all(color: Colors.blueGrey.withOpacity(0.3), width: 1)
                           ),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Icon(Iconsax.arrow_3, color: Colors.blueGrey,),
@@ -259,10 +259,10 @@ class _ChartExampleState extends State<ChartExample> {
       ),
       titlesData: FlTitlesData(
         show: true,
-        rightTitles: AxisTitles(
+        rightTitles: const AxisTitles(
           sideTitles: SideTitles(showTitles: false),
         ),
-        topTitles: AxisTitles(
+        topTitles: const AxisTitles(
           sideTitles: SideTitles(showTitles: false),
         ),
         bottomTitles: AxisTitles(
@@ -337,21 +337,21 @@ class _ChartExampleState extends State<ChartExample> {
         LineChartBarData(
           spots: _isLoaded ? [
 
-            FlSpot(0, 3),
-            FlSpot(2.4, 2),
-            FlSpot(4.4, 3),
-            FlSpot(6.4, 3.1),
-            FlSpot(8, 4),
-            FlSpot(9.5, 4),
-            FlSpot(11, 5),
+            const FlSpot(0, 3),
+            const FlSpot(2.4, 2),
+            const FlSpot(4.4, 3),
+            const FlSpot(6.4, 3.1),
+            const FlSpot(8, 4),
+            const FlSpot(9.5, 4),
+            const FlSpot(11, 5),
           ] : [
-            FlSpot(0, 0),
-            FlSpot(2.4, 0),
-            FlSpot(4.4, 0),
-            FlSpot(6.4, 0),
-            FlSpot(8, 0),
-            FlSpot(9.5, 0),
-            FlSpot(11, 0)
+            const FlSpot(0, 0),
+            const FlSpot(2.4, 0),
+            const FlSpot(4.4, 0),
+            const FlSpot(6.4, 0),
+            const FlSpot(8, 0),
+            const FlSpot(9.5, 0),
+            const FlSpot(11, 0)
           ],
           isCurved: true,
           gradient: LinearGradient(
@@ -360,15 +360,15 @@ class _ChartExampleState extends State<ChartExample> {
             end: Alignment.centerRight,
           ),
           barWidth: 2,
-          dotData: FlDotData(
+          dotData: const FlDotData(
             show: false,
           ),
           belowBarData: BarAreaData(
             show: true,
             gradient: LinearGradient(
               colors: [
-                Color(0xff02d39a).withOpacity(0.1),
-                Color(0xff02d39a).withOpacity(0),
+                const Color(0xff02d39a).withOpacity(0.1),
+                const Color(0xff02d39a).withOpacity(0),
               ],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
