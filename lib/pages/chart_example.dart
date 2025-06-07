@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'dart:ui';
 
 import 'package:animate_do/animate_do.dart';
@@ -8,7 +10,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class ChartExample extends StatefulWidget {
-  const ChartExample({ Key? key }) : super(key: key);
+  const ChartExample({ super.key });
 
   @override
   _ChartExampleState createState() => _ChartExampleState();
