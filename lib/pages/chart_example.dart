@@ -1,7 +1,4 @@
 // ignore_for_file: library_private_types_in_public_api
-
-import 'dart:ui';
-
 import 'package:animate_do/animate_do.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +7,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class ChartExample extends StatefulWidget {
-  const ChartExample({ super.key });
+  const ChartExample({super.key});
 
   @override
   _ChartExampleState createState() => _ChartExampleState();
@@ -35,112 +32,125 @@ class _ChartExampleState extends State<ChartExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.notifications, color: Colors.blueGrey,),
-            onPressed: () {
-            },
-          ),
-          IconButton(
-            icon: const Icon(Icons.more_vert, color: Colors.blueGrey,),
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          actions: [
+            IconButton(
+              icon: const Icon(
+                Icons.notifications,
+                color: Colors.blueGrey,
+              ),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: const Icon(
+                Icons.more_vert,
+                color: Colors.blueGrey,
+              ),
+              onPressed: () {},
+            ),
+          ],
+          leading: IconButton(
+            icon: const Icon(
+              Icons.menu,
+              color: Colors.blueGrey,
+            ),
             onPressed: () {},
           ),
-        ],
-        leading: IconButton(
-          icon: const Icon(Icons.menu, color: Colors.blueGrey,),
-          onPressed: () {},
         ),
-      ),
-      backgroundColor: const Color(0xff161621),
-      bottomNavigationBar: SalomonBottomBar(
-        currentIndex: _currentIndex,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white,
-        margin: const EdgeInsets.only(bottom: 30, top: 10, right: 20, left: 20),
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        items: [
-          SalomonBottomBarItem(
-            icon: const Icon(Icons.home),
-            title: const Text("Home"),
-            selectedColor: Colors.white
-          ),
-          SalomonBottomBarItem(
-            icon: const Icon(Icons.explore_outlined),
-            title: const Text("Likes"),
-            selectedColor: Colors.pink
-          ),
-          SalomonBottomBarItem(
-            icon: const Icon(Icons.data_usage),
-            title: const Text("Search"),
-            selectedColor: Colors.orange
-          ),
-          SalomonBottomBarItem(
-            icon: const Icon(Icons.settings),
-            title: const Text("Profile"),
-            selectedColor: Colors.teal
-          )
-        ],
-      ),
-      body: NestedScrollView(
-        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-          return <Widget>[
-            SliverToBoxAdapter(
-              child: Container(
-                padding: const EdgeInsets.all(20),
-                width: double.infinity,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Container(
-                      width: double.infinity,
-                      child: Column(
-                        children: [
-                          FadeInUp(
-                            duration: const Duration(milliseconds: 800),
-                            child: Text("Balance", style: TextStyle(color: Colors.blueGrey.shade300, fontSize: 20),)),
-                          const SizedBox(height: 20,),
-                          FadeInUp(
-                            duration: const Duration(milliseconds: 800),
-                            child: Text("\$ 12,500.00", style: GoogleFonts.sora(
-                              fontSize: 40,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white
-                            ),),
-                          ),
-
-                        ],
-                      ),
-                    ),
-                    FadeInUp(
-                      duration: const Duration(milliseconds: 1000),
-                      child: Container(
+        backgroundColor: const Color(0xff161621),
+        bottomNavigationBar: SalomonBottomBar(
+          currentIndex: _currentIndex,
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.white,
+          margin:
+              const EdgeInsets.only(bottom: 30, top: 10, right: 20, left: 20),
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+          items: [
+            SalomonBottomBarItem(
+                icon: const Icon(Icons.home),
+                title: const Text("Home"),
+                selectedColor: Colors.white),
+            SalomonBottomBarItem(
+                icon: const Icon(Icons.explore_outlined),
+                title: const Text("Likes"),
+                selectedColor: Colors.pink),
+            SalomonBottomBarItem(
+                icon: const Icon(Icons.data_usage),
+                title: const Text("Search"),
+                selectedColor: Colors.orange),
+            SalomonBottomBarItem(
+                icon: const Icon(Icons.settings),
+                title: const Text("Profile"),
+                selectedColor: Colors.teal),
+          ],
+        ),
+        body: NestedScrollView(
+          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+            return <Widget>[
+              SliverToBoxAdapter(
+                child: Container(
+                  padding: const EdgeInsets.all(20),
+                  width: double.infinity,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      SizedBox(
                         width: double.infinity,
-                        height: 250,
-                        child: LineChart(
-                          mainData(),
-                          duration: const Duration(milliseconds: 1000), // Optional
-                          curve: Curves.linear, // Optional
+                        child: Column(
+                          children: [
+                            FadeInUp(
+                                duration: const Duration(milliseconds: 800),
+                                child: Text(
+                                  "Balance",
+                                  style: TextStyle(
+                                      color: Colors.blueGrey.shade300,
+                                      fontSize: 20),
+                                )),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            FadeInUp(
+                              duration: const Duration(milliseconds: 800),
+                              child: Text(
+                                "\$ 12,500.00",
+                                style: GoogleFonts.sora(
+                                    fontSize: 40,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                    ),
-                  ],
+                      FadeInUp(
+                        duration: const Duration(milliseconds: 1000),
+                        child: Container(
+                          width: double.infinity,
+                          height: 250,
+                          child: LineChart(
+                            mainData(),
+                            duration:
+                                const Duration(milliseconds: 1000), // Optional
+                            curve: Curves.linear, // Optional
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            )
-          ];
-        },
-        body: Container(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+              )
+            ];
+          },
+          body: Container(
+            padding: const EdgeInsets.all(20),
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               FadeInUp(
                 duration: const Duration(milliseconds: 1000),
                 child: Row(
@@ -150,48 +160,76 @@ class _ChartExampleState extends State<ChartExample> {
                       onPressed: () {
                         Navigator.of(context).pushReplacementNamed('/');
                       },
-                      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30, vertical: 15),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)
-                      ),
+                          borderRadius: BorderRadius.circular(10)),
                       color: const Color(0xff02d39a).withOpacity(0.7),
                       child: const Row(
                         children: [
-                          Icon(Iconsax.wallet, color: Colors.white,),
-                          SizedBox(width: 10,),
-                          Text("Payment", style: TextStyle(color: Colors.white),),
+                          Icon(
+                            Iconsax.wallet,
+                            color: Colors.white,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Payment",
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ],
                       ),
                     ),
-                    const SizedBox(width: 20,),
+                    const SizedBox(
+                      width: 20,
+                    ),
                     MaterialButton(
                       onPressed: () {},
                       shape: RoundedRectangleBorder(
-                        side: BorderSide(color: const Color(0xff02d39a).withOpacity(0.4), width: 1),
-                        borderRadius: BorderRadius.circular(10)
-                      ),
+                          side: BorderSide(
+                              color: const Color(0xff02d39a).withOpacity(0.4),
+                              width: 1),
+                          borderRadius: BorderRadius.circular(10)),
                       splashColor: const Color(0xff02d39a).withOpacity(0.4),
                       highlightColor: const Color(0xff02d39a).withOpacity(0.4),
-                      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30, vertical: 15),
                       color: Colors.transparent,
                       elevation: 0,
                       child: const Row(
                         children: [
-                          Icon(Iconsax.arrow_3, color: Colors.white,),
-                          SizedBox(width: 10,),
-                          Text("Transfer", style: TextStyle(color: Colors.white),),
+                          Icon(
+                            Iconsax.arrow_3,
+                            color: Colors.white,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Transfer",
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ],
                       ),
                     )
                   ],
                 ),
               ),
-              const SizedBox(height: 40,),
+              const SizedBox(
+                height: 40,
+              ),
               // recent transactions
               FadeInUp(
-                duration: const Duration(milliseconds: 1000),
-                child: Text("Recent Transactions", style: TextStyle(color: Colors.blueGrey.shade300, fontSize: 16),)),
-              const SizedBox(height: 20,),
+                  duration: const Duration(milliseconds: 1000),
+                  child: Text(
+                    "Recent Transactions",
+                    style: TextStyle(
+                        color: Colors.blueGrey.shade300, fontSize: 16),
+                  )),
+              const SizedBox(
+                height: 20,
+              ),
               Expanded(
                 child: Container(
                   height: 200,
@@ -203,23 +241,46 @@ class _ChartExampleState extends State<ChartExample> {
                         from: 50,
                         duration: Duration(milliseconds: 1000 + index * 100),
                         child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 20),
                           margin: const EdgeInsets.only(bottom: 15),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            // color: Colors.black.withOpacity(0.3),
-                            border: Border.all(color: Colors.blueGrey.withOpacity(0.3), width: 1)
-                          ),
+                              borderRadius: BorderRadius.circular(10),
+                              // color: Colors.black.withOpacity(0.3),
+                              border: Border.all(
+                                  color: Colors.blueGrey.withOpacity(0.3),
+                                  width: 1)),
                           child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Icon(Iconsax.arrow_3, color: Colors.blueGrey,),
-                              SizedBox(width: 10,),
-                              Text("Transfer", style: TextStyle(color: Colors.blueGrey),),
-                              SizedBox(width: 10,),
-                              Text("\$ 12,500.00", style: TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold),),
-                              SizedBox(width: 10,),
-                              Text("12:00 PM", style: TextStyle(color: Colors.blueGrey, fontSize: 12),),
+                              Icon(
+                                Iconsax.arrow_3,
+                                color: Colors.blueGrey,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                "Transfer",
+                                style: TextStyle(color: Colors.blueGrey),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                "\$ 12,500.00",
+                                style: TextStyle(
+                                    color: Colors.blueGrey,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                "12:00 PM",
+                                style: TextStyle(
+                                    color: Colors.blueGrey, fontSize: 12),
+                              ),
                             ],
                           ),
                         ),
@@ -227,12 +288,10 @@ class _ChartExampleState extends State<ChartExample> {
                     },
                   ),
                 ),
-              ), 
-            ]
+              ),
+            ]),
           ),
-        ),
-      )
-    );
+        ));
   }
 
   List<Color> gradientColors = [
@@ -246,17 +305,16 @@ class _ChartExampleState extends State<ChartExample> {
         show: false,
       ),
       gridData: FlGridData(
-        show: true,
-        horizontalInterval: 1.6,
-        getDrawingHorizontalLine: (value) {
-          return FlLine(
-            dashArray: const [3, 3],
-            color: const Color(0xff37434d).withOpacity(0.2),
-            strokeWidth: 2,
-          );
-        },
-        drawVerticalLine: false
-      ),
+          show: true,
+          horizontalInterval: 1.6,
+          getDrawingHorizontalLine: (value) {
+            return FlLine(
+              dashArray: const [3, 3],
+              color: const Color(0xff37434d).withOpacity(0.2),
+              strokeWidth: 2,
+            );
+          },
+          drawVerticalLine: false),
       titlesData: FlTitlesData(
         show: true,
         rightTitles: const AxisTitles(
@@ -295,7 +353,7 @@ class _ChartExampleState extends State<ChartExample> {
                 ),
               );
             },
-          //  margin: 10,
+            //  margin: 10,
           ),
         ),
         leftTitles: AxisTitles(
@@ -325,7 +383,7 @@ class _ChartExampleState extends State<ChartExample> {
               );
             },
             reservedSize: 25,
-          //  margin: 12,
+            //  margin: 12,
           ),
         ),
       ),
@@ -335,24 +393,25 @@ class _ChartExampleState extends State<ChartExample> {
       maxY: 6,
       lineBarsData: [
         LineChartBarData(
-          spots: _isLoaded ? [
-
-            const FlSpot(0, 3),
-            const FlSpot(2.4, 2),
-            const FlSpot(4.4, 3),
-            const FlSpot(6.4, 3.1),
-            const FlSpot(8, 4),
-            const FlSpot(9.5, 4),
-            const FlSpot(11, 5),
-          ] : [
-            const FlSpot(0, 0),
-            const FlSpot(2.4, 0),
-            const FlSpot(4.4, 0),
-            const FlSpot(6.4, 0),
-            const FlSpot(8, 0),
-            const FlSpot(9.5, 0),
-            const FlSpot(11, 0)
-          ],
+          spots: _isLoaded
+              ? [
+                  const FlSpot(0, 3),
+                  const FlSpot(2.4, 2),
+                  const FlSpot(4.4, 3),
+                  const FlSpot(6.4, 3.1),
+                  const FlSpot(8, 4),
+                  const FlSpot(9.5, 4),
+                  const FlSpot(11, 5),
+                ]
+              : [
+                  const FlSpot(0, 0),
+                  const FlSpot(2.4, 0),
+                  const FlSpot(4.4, 0),
+                  const FlSpot(6.4, 0),
+                  const FlSpot(8, 0),
+                  const FlSpot(9.5, 0),
+                  const FlSpot(11, 0)
+                ],
           isCurved: true,
           gradient: LinearGradient(
             colors: gradientColors,
