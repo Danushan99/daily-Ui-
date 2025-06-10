@@ -69,7 +69,7 @@ class _VeroPageState extends State<VeroPage> {
     PostModel(
         avatar:
             "https://instagram.fcmb11-1.fna.fbcdn.net/v/t51.2885-19/277325659_148711920961973_1107088744007699452_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fcmb11-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=_2KrLYruYPcAX-8jRka&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-yK9tCfunGBQT04oqmms1OcXJaNekyOVu8r46F2jrYTA&oe=630BD1D0&_nc_sid=8fd12b",
-        author: "Finsi Ennes",
+        author: "Finsi",
         caption:
             "During this month will be learning about concurrency in Swift. I had already done some exercises but i want to go deeper in this topic. It’s likely that I create a sample app to put into practice all the knowledge so if you are also interested in this just let me know! So maybe I publish the code :)",
         tags: ['code', 'algo', 'developer'],
