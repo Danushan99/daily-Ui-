@@ -81,7 +81,7 @@ class _VeroPageState extends State<VeroPage> {
         avatar:
             "https://instagram.fcmb11-1.fna.fbcdn.net/v/t51.2885-19/295310263_2005323692988879_192442431266284434_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fcmb11-1.fna.fbcdn.net&_nc_cat=1&_nc_ohc=_OycxPTZAiIAX9Klfo3&tn=mzpEx8VKjXTflDC7&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9m_Q6Aj_JBs7O-IbeEpOkg5rnaWSzkqYarXN5z2MnNyQ&oe=630AB077&_nc_sid=8fd12b",
         author: "Khalled Nadam",
-        caption: "Happy coding",
+        caption: "Happy coding ",
         tags: ['code', 'algo', 'developer', 'weekend', 'cool'],
         photo: 'post3.jpeg',
         date: DateTime.now(),
