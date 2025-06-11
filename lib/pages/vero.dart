@@ -94,7 +94,7 @@ class _VeroPageState extends State<VeroPage> {
       extendBody: true,
       extendBodyBehindAppBar: true,
       appBar: PreferredSize(
-        preferredSize: Size(0, 55),
+        preferredSize: Size(0.1, 55),
         child: ClipRect(
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 40, sigmaY: 40),
