@@ -4,7 +4,7 @@ import 'package:ui_migration/pages/button.dart';
 
 
 class FadeAnimation extends StatefulWidget {
-  const FadeAnimation({ Key? key }) : super(key: key);
+  const FadeAnimation({ super.key });
 
   @override
   _FadeAnimationState createState() => _FadeAnimationState();
