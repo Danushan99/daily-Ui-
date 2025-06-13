@@ -1,11 +1,10 @@
-import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class GithubUsers extends StatefulWidget {
-  const GithubUsers({ Key? key }) : super(key: key);
+  const GithubUsers({ super.key });
 
   @override
   _GithubUsersState createState() => _GithubUsersState();
