@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:ui_migration/pages/animated_container.dart';
-import 'package:ui_migration/pages/chart_example.dart';
 import 'package:ui_migration/pages/learn_flutter.dart';
 
 
@@ -11,7 +9,7 @@ void main() => runApp(const MaterialApp(
     ));
 
 
-    
+
 // void main() {
 //   runApp(MultiProvider(providers: [
 //     ChangeNotifierProvider(
@@ -22,10 +20,8 @@ void main() => runApp(const MaterialApp(
 //     ),
 //   ], child: const ChartExample()));
 // }
-
 // class MyApp extends StatelessWidget {
 //   const MyApp({super.key});
-
 //   @override
 //   Widget build(BuildContext context) {
 //     return MaterialApp(
