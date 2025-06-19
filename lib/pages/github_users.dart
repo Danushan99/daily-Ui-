@@ -23,7 +23,7 @@ class _GithubUsersState extends State<GithubUsers> {
       setState(() {
         users = response.data;
       });
-    } catch (e) {}
+    } catch (e) {} 
   }
 
   @override

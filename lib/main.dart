@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:ui_migration/pages/animated_container.dart';
 import 'package:ui_migration/pages/learn_flutter.dart';
-
+import 'package:ui_migration/pages/odometer_example.dart';
+import 'package:ui_migration/pages/verification.dart';
 
 void main() => runApp(const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LearnFlutter(),
+      home: Verificatoin(),
     ));
-
-
 
 // void main() {
 //   runApp(MultiProvider(providers: [
